@@ -5,17 +5,14 @@ def main():
     num_chars = char_count(text)
     org = organize_dict(num_chars)
     
-    print(f"--- Start report on {path} ---")
-    print()
-    print(f"{num_words} words found in the book")
-    print()
+    print(f"--- Start report on {path} ---\n")
+    print(f"{num_words} words found in the book\n")
 
     for item in org:
         if not item["letter"].isalpha():
             continue
         print(f"The '{item['letter']}' character was found {item['number']} times")
-    print()
-    print("--- End of report ---")
+    print("\n--- End of report ---")
 
 def word_count(text):
     words = text.split()
